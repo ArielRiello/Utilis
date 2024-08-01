@@ -1,35 +1,33 @@
-- Cria ambiente virtual:
+# Cria ambiente virtual:
+python -m venv venv
 
-	python -m venv venv
+# Ativa ambiente virtual:
+.\venv\Scripts\Activate
 
-- Ativa ambiente virtual:
+# Executa somente scripts criados no computador (não executa baixados da internet):
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
-	.\venv\Scripts\Activate
+# Libera execução de scripts temporariamente:
+Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
 
-- Executa somente scripts criados no computador (não executa baixados da internet):
+# Desativa ambiente virtual:
+deactivate
 
-	Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+# Gera o arquivo "requirements.txt":
+pip freeze > requirements.txt
 
-- Libera execução de scripts temporariamente:
+# Atualiza todas bibliotecas do "requirements.txt":
+pip install --upgrade -r requirements.txt
 
-	Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
+# Atualiza o "requirements.txt":
+pip freeze > requirements.txt
 
-- Desativa ambiente virtual:
+# Instala todas bibliotecas do "requirements.txt":
+pip install -r requirements.txt
 
-	deactivate
+# Criar ambiente virtual especificando o caminho completo para o Python (exemplo genérico):
+# Você pode escolher uma versão específica do Python.
+C:\Caminho\Para\Python\python.exe -m venv venv
 
-- Gera o arquivo "requirements.txt":
-
-	pip freeze > requirements.txt
-
-- Atualiza todas bibliotecas do "requirements.txt":
-
-	pip install --upgrade -r requirements.txt
-
-- Atualiza o "requirements.txt" 
-
-	pip freeze > requirements.txt
-
-- Instala todas bibliotecas do "requiments.txt":
-
-	pip install -r requirements.txt
+# Verificar a versão do Python no ambiente virtual:
+python --version
