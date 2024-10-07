@@ -1,0 +1,30 @@
+# Cria um ambiente virtual:
+python -m venv venv
+
+# Cria um ambiente virtual especificando o caminho completo para o Python (exemplo genérico):
+# Você pode escolher uma versão específica do Python.
+C:\Caminho\Para\Python\python.exe -m venv venv
+
+# Ativa o ambiente virtual (Windows):
+.\venv\Scripts\Activate
+
+# Verifica a versão do Python no ambiente virtual:
+python --version
+
+# Desativa o ambiente virtual:
+deactivate
+
+# Gera o arquivo "requirements.txt" com os pacotes instalados:
+pip freeze > requirements.txt
+
+# Instala todas as bibliotecas listadas no "requirements.txt":
+pip install -r requirements.txt
+
+# Atualiza todas as bibliotecas do "requirements.txt":
+pip install --upgrade -r requirements.txt
+
+# Executa somente scripts criados no computador (não executa scripts baixados da internet):
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+# Libera execução de scripts temporariamente (para a sessão atual do processo):
+Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process
