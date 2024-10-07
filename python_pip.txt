@@ -1,0 +1,27 @@
+
+# Instala um pacote:
+pip install nome_do_pacote
+
+# Instala múltiplos pacotes:
+pip install yfinance pandas-datareader
+
+# Atualiza um pacote para a versão mais recente:
+pip install --upgrade nome_do_pacote
+
+# Desinstala um pacote:
+pip uninstall nome_do_pacote
+
+# Lista todos os pacotes instalados:
+pip list
+
+# Verifica pacotes desatualizados:
+pip list --outdated
+
+# Instala pacotes a partir de um arquivo requirements.txt:
+pip install -r requirements.txt
+
+# Salva os pacotes instalados em requirements.txt:
+pip freeze > requirements.txt
+
+# Mostra detalhes de um pacote específico:
+pip show nome_do_pacote
